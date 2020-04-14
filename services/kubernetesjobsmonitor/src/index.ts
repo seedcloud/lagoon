@@ -4,7 +4,7 @@ const Client = Api.Client1_13;
 
 const { logger } = require('@lagoon/commons/dist/local-logging');
 const { getOpenShiftInfoForProject, updateTask } = require('@lagoon/commons/src/api');
-const { sendToLagoonLogs, initSendToLagoonLogs } = require('@lagoon/commons/src/logs');
+const { sendToLagoonLogs, initSendToLagoonLogs } = require('@lagoon/commons/dist/logs');
 const { consumeTaskMonitor, initSendToLagoonTasks } = require('@lagoon/commons/src/tasks');
 
 class JobNotCompletedYet extends Error {

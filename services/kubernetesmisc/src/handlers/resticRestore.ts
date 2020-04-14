@@ -2,7 +2,7 @@ import * as R from 'ramda';
 import { getOpenShiftInfoForProject, updateTask } from '@lagoon/commons/src/api';
 import { BaaS } from '@lagoon/commons/dist/openshiftApi';
 import { logger } from "@lagoon/commons/dist/local-logging";
-import { sendToLagoonLogs } from '@lagoon/commons/src/logs';
+import { sendToLagoonLogs } from '@lagoon/commons/dist/logs';
 import { promisify } from 'util';
 
 const ocsafety = string => string.toLocaleLowerCase().replace(/[^0-9a-z-]/g, '-');

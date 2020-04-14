@@ -1,5 +1,5 @@
 import { logger } from '@lagoon/commons/dist/local-logging';
-import { sendToLagoonLogs, initSendToLagoonLogs } from '@lagoon/commons/src/logs';
+import { sendToLagoonLogs, initSendToLagoonLogs } from '@lagoon/commons/dist/logs';
 import { consumeTasks, initSendToLagoonTasks } from '@lagoon/commons/src/tasks';
 
 import resticRestore from './handlers/resticRestore';

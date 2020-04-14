@@ -10,7 +10,7 @@ const {
 const {
   sendToLagoonLogs,
   initSendToLagoonLogs
-} = require('@lagoon/commons/src/logs');
+} = require('@lagoon/commons/dist/logs');
 const {
   consumeTasks,
   initSendToLagoonTasks,

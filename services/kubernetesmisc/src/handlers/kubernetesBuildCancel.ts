@@ -1,7 +1,7 @@
 import * as R from 'ramda';
 import { getOpenShiftInfoForProject, updateTask, updateDeployment } from '@lagoon/commons/src/api';
 import { logger } from "@lagoon/commons/dist/local-logging";
-import { sendToLagoonLogs } from '@lagoon/commons/src/logs';
+import { sendToLagoonLogs } from '@lagoon/commons/dist/logs';
 
 import Api, { ClientConfiguration } from 'kubernetes-client';
 const Client = Api.Client1_13;
