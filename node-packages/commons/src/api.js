@@ -1,5 +1,5 @@
 const { Lokka } = require('lokka');
-const { Transport } = require('./lokka-transport-http-retry');
+const { Transport } = require('../dist/lokka-transport-http-retry');
 const R = require('ramda');
 const { createJWTWithoutUserId } = require('./jwt');
 const { logger } = require('./local-logging');
