@@ -10,7 +10,7 @@ const {
   updateProject,
   updateTask,
 } = require('@lagoon/commons/src/api');
-const { RouteMigration } = require('@lagoon/commons/src/openshiftApi');
+const { RouteMigration } = require('@lagoon/commons/dist/openshiftApi');
 const convertDateFormat = R.init;
 
 const pause = duration => new Promise(res => setTimeout(res, duration));
