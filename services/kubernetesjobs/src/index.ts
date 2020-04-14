@@ -2,7 +2,7 @@ import * as R from 'ramda';
 import Api, { ClientConfiguration } from 'kubernetes-client';
 const Client = Api.Client1_13;
 
-const { logger } = require('@lagoon/commons/src/local-logging');
+const { logger } = require('@lagoon/commons/dist/local-logging');
 const {
   getOpenShiftInfoForProject,
   updateTask

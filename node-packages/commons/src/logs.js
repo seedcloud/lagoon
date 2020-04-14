@@ -1,5 +1,5 @@
 const amqp = require('amqp-connection-manager');
-const { logger } = require('./local-logging');
+const { logger } = require('../dist/local-logging');
 
 const rabbitmqHost = process.env.RABBITMQ_HOST || 'broker';
 const rabbitmqUsername = process.env.RABBITMQ_USERNAME || 'guest';

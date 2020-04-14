@@ -1,7 +1,7 @@
 const promisify = require('util').promisify;
 const R = require('ramda');
 const KubernetesClient = require('kubernetes-client');
-const { logger } = require('@lagoon/commons/src/local-logging');
+const { logger } = require('@lagoon/commons/dist/local-logging');
 const {
   sendToLagoonLogs,
   initSendToLagoonLogs

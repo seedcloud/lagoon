@@ -1,5 +1,5 @@
 const amqp = require('amqp-connection-manager');
-const { logger } = require('./local-logging');
+const { logger } = require('../dist/local-logging');
 
 exports.initSendToLagoonTasks = initSendToLagoonTasks;
 exports.createDeployTask = createDeployTask;

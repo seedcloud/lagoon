@@ -1,7 +1,7 @@
 const promisify = require('util').promisify;
 const KubernetesClient = require('kubernetes-client');
 const R = require('ramda');
-const { logger } = require('@lagoon/commons/src/local-logging');
+const { logger } = require('@lagoon/commons/dist/local-logging');
 const {
   getOpenShiftInfoForProject,
   updateDeployment

@@ -1,4 +1,4 @@
-import { logger } from '@lagoon/commons/src/local-logging';
+import { logger } from '@lagoon/commons/dist/local-logging';
 import { sendToLagoonLogs, initSendToLagoonLogs } from '@lagoon/commons/src/logs';
 import { consumeTasks, initSendToLagoonTasks } from '@lagoon/commons/src/tasks';
 
