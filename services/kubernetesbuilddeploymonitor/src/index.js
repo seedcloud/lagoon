@@ -12,7 +12,7 @@ const {
   getDeploymentByName,
   updateDeployment,
   setEnvironmentServices,
-} = require('@lagoon/commons/src/api');
+} = require('@lagoon/commons/dist/api');
 
 const { sendToLagoonLogs, initSendToLagoonLogs } = require('@lagoon/commons/dist/logs');
 const { consumeTaskMonitor, initSendToLagoonTasks } = require('@lagoon/commons/dist/tasks');

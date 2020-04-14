@@ -1,5 +1,5 @@
 import * as R from 'ramda';
-import { getOpenShiftInfoForProject, updateTask, updateDeployment } from '@lagoon/commons/src/api';
+import { getOpenShiftInfoForProject, updateTask, updateDeployment } from '@lagoon/commons/dist/api';
 import { logger } from "@lagoon/commons/dist/local-logging";
 import { sendToLagoonLogs } from '@lagoon/commons/dist/logs';
 

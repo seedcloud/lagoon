@@ -16,12 +16,7 @@ exports.createTaskMonitor = createTaskMonitor;
 exports.consumeTaskMonitor = consumeTaskMonitor;
 exports.consumeTasks = consumeTasks;
 
-// TODO: we can't "import" the api until flow is removed so this is the correct
-// path when this has been compiled into the "dist" folder
-const {
-  getActiveSystemForProject,
-  getEnvironmentsForProject
-} = require('../src/api');
+import { getActiveSystemForProject, getEnvironmentsForProject } from './api';
 
 interface MessageConsumer {
   (msg: ConsumeMessage): Promise<void>;
@@ -241,7 +236,7 @@ async function createDeployTask(deployData: any) {
     pullrequestTitle
   } = deployData;
 
-  const project = await getActiveSystemForProject(projectName, 'deploy');
+  const project = await getActiveSystemForProject(projectName, 'Deploy');
   const environments = await getEnvironmentsForProject(projectName);
 
   // environments =
@@ -436,7 +431,7 @@ async function createPromoteTask(promoteData: any) {
     // type,
   } = promoteData;
 
-  const project = await getActiveSystemForProject(projectName, 'promote');
+  const project = await getActiveSystemForProject(projectName, 'Promote');
 
   if (typeof project.activeSystemsPromote === 'undefined') {
     throw new UnknownActiveSystem(
@@ -483,7 +478,7 @@ async function createRemoveTask(removeData: any) {
     }
   }
 
-  const project = await getActiveSystemForProject(projectName, 'remove');
+  const project = await getActiveSystemForProject(projectName, 'Remove');
 
   if (typeof project.activeSystemsRemove === 'undefined') {
     throw new UnknownActiveSystem(
@@ -622,7 +617,7 @@ async function createRemoveTask(removeData: any) {
 async function createTaskTask(taskData: any) {
   const { project } = taskData;
 
-  const projectSystem = await getActiveSystemForProject(project.name, 'task');
+  const projectSystem = await getActiveSystemForProject(project.name, 'Task');
 
   if (typeof projectSystem.activeSystemsTask === 'undefined') {
     throw new UnknownActiveSystem(
@@ -650,7 +645,7 @@ async function createMiscTask(taskData: any) {
     data: { project }
   } = taskData;
 
-  const data = await getActiveSystemForProject(project.name, 'misc');
+  const data = await getActiveSystemForProject(project.name, 'Misc');
 
   let updatedKey = key;
   let taskId = '';

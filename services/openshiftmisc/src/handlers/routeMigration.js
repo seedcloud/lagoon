@@ -9,7 +9,7 @@ const {
   getOpenShiftInfoForProject,
   updateProject,
   updateTask,
-} = require('@lagoon/commons/src/api');
+} = require('@lagoon/commons/dist/api');
 const { RouteMigration } = require('@lagoon/commons/dist/openshiftApi');
 const convertDateFormat = R.init;
 

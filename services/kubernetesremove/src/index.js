@@ -13,7 +13,7 @@ const {
 const {
   getOpenShiftInfoForProject,
   deleteEnvironment
-} = require('@lagoon/commons/src/api');
+} = require('@lagoon/commons/dist/api');
 
 initSendToLagoonLogs();
 initSendToLagoonTasks();

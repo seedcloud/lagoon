@@ -3,7 +3,7 @@ import Api, { ClientConfiguration } from 'kubernetes-client';
 const Client = Api.Client1_13;
 
 const { logger } = require('@lagoon/commons/dist/local-logging');
-const { getOpenShiftInfoForProject, updateTask } = require('@lagoon/commons/src/api');
+const { getOpenShiftInfoForProject, updateTask } = require('@lagoon/commons/dist/api');
 const { sendToLagoonLogs, initSendToLagoonLogs } = require('@lagoon/commons/dist/logs');
 const { consumeTaskMonitor, initSendToLagoonTasks } = require('@lagoon/commons/dist/tasks');
 

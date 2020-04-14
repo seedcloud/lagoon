@@ -26,7 +26,7 @@ const environmentHelpers = require('../environment/helpers');
 const projectHelpers = require('../project/helpers');
 const {
   addTask,
-} = require('@lagoon/commons/src/api');
+} = require('@lagoon/commons/dist/api');
 const uuid4 = require('uuid4');
 const convertDateFormat = R.init;
 const environmentSql = require('../environment/sql');
