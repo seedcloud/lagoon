@@ -9,7 +9,7 @@ const {
 const {
   consumeTasks,
   initSendToLagoonTasks
-} = require('@lagoon/commons/src/tasks');
+} = require('@lagoon/commons/dist/tasks');
 const {
   getOpenShiftInfoForProject,
   deleteEnvironment

@@ -15,7 +15,7 @@ const {
   consumeTaskMonitor,
   initSendToLagoonTasks,
   createTaskMonitor
-} = require('@lagoon/commons/src/tasks');
+} = require('@lagoon/commons/dist/tasks');
 
 initSendToLagoonLogs();
 initSendToLagoonTasks();

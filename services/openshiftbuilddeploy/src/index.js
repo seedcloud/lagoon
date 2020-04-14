@@ -10,7 +10,7 @@ const { logger } = require('@lagoon/commons/dist/local-logging');
 const { getOpenShiftInfoForProject, addOrUpdateEnvironment, getEnvironmentByName, addDeployment } = require('@lagoon/commons/src/api');
 
 const { sendToLagoonLogs, initSendToLagoonLogs } = require('@lagoon/commons/dist/logs');
-const { consumeTasks, initSendToLagoonTasks, createTaskMonitor } = require('@lagoon/commons/src/tasks');
+const { consumeTasks, initSendToLagoonTasks, createTaskMonitor } = require('@lagoon/commons/dist/tasks');
 
 initSendToLagoonLogs();
 initSendToLagoonTasks();
@@ -58,7 +58,7 @@ const messageConsumer = async msg => {
     }
 
     // if we get this far, assume we already passed the point of if the environment can be deployed,
-    // so default to development, and change to production based on the same conditions as in commons/src/tasks.js
+    // so default to development, and change to production based on the same conditions as in commons/dist/tasks.js
     var environmentType = 'development'
     if (
       projectOpenShift.productionEnvironment === branchName

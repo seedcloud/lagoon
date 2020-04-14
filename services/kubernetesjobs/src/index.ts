@@ -15,7 +15,7 @@ const {
   consumeTasks,
   initSendToLagoonTasks,
   createTaskMonitor
-} = require('@lagoon/commons/src/tasks');
+} = require('@lagoon/commons/dist/tasks');
 
 const lagoonApiRoute = R.compose(
   // Default to the gateway IP in virtualbox, so pods running in minishift can
