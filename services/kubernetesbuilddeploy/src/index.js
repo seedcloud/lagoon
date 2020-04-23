@@ -307,7 +307,7 @@ const messageConsumer = async msg => {
   let namespaceStatus = {}
   try {
     const namespacePost = promisify(kubernetes.namespace.post)
-    namespaceStatus = await namespacePost({ body: {"apiVersion":"v1","kind":"Namespace","metadata":{"name":openshiftProject}} })
+    namespaceStatus = await namespacePost({ body: {"apiVersion":"v1","kind":"Namespace","metadata":{"name":openshiftProject, "labels": {"lagoon/project": projectName}}} })
     logger.info(`${openshiftProject}: Namespace ${openshiftProject} created`)
   } catch (err) {
     console.log(err.code)
