@@ -562,7 +562,7 @@ $(all-k8s-tests): k3d kubernetes-test-services-up
 		$(eval testname = $(subst k8s-tests/,,$@))
 		IMAGE_REPO=$(CI_BUILD_TAG) docker-compose -p $(CI_BUILD_TAG) run --rm tests-kubernetes ansible-playbook --skip-tags="skip-on-kubernetes" \
 		/ansible/tests/$(testname).yaml $(testparameter) \
-		--extra-vars "$$(cat $$(./local-dev/k3d get-kubeconfig --name=$(K3D_NAME)) | jq -rcsR '{kubeconfig: .}' | jq -rR)"
+		--extra-vars "$$(cat $$(./local-dev/k3d get-kubeconfig --name='$(K3D_NAME)') | jq -rcsR '{kubeconfig: .}' | jq -rR)"
 
 # push command of our base images into minishift
 push-local-registry-images = $(foreach image,$(base-images) $(base-images-with-versions),[push-local-registry]-$(image))
