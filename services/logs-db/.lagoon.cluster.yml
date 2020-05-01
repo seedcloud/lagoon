@@ -132,7 +132,7 @@ objects:
             - ReadWriteOnce
           resources:
             requests:
-              storage: 100G
+              storage: 40G
           storageClassName: lagoon-elasticsearch
 - apiVersion: apps/v1beta1
   kind: StatefulSet
@@ -238,5 +238,5 @@ objects:
             - ReadWriteOnce
           resources:
             requests:
-              storage: 1000Gi
+              storage: 50Gi
           storageClassName:  lagoon-logs-db-archive
