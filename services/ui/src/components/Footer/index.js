@@ -5,7 +5,7 @@ const { publicRuntimeConfig } = getConfig();
 
 const Footer = () => (
   <footer>
-  <span className="version">Lagoon {`${publicRuntimeConfig.LAGOON_VERSION}`}</span>
+  <span className="version">SeeD Cloud - Powered by Lagoon {`${publicRuntimeConfig.LAGOON_VERSION}`}</span>
     <style jsx>{`
       footer {
         background: ${color.brightBlue} ${color.lightBlue};
